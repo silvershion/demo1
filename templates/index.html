@@ -2,6 +2,16 @@
 <html lang="en">
 	<head></head>
 	<body>
-		<h1>Incendios en España desde 2001 hasta 2011</head>
+		<h1>Incendios en España desde 2001 hasta 2011</h1>
+		<table border=1 cellpadding=7>
+			<tr>
+				<th>Name</th>
+			</tr>
+		{% for obj in object_list %}
+			<tr>
+				<td>{{ obj['Text'].decode('UTF-8') }}</td>
+			</tr>
+		{% endfor %}
+		</table>
 	<body>
 </html>
