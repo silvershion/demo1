@@ -2,11 +2,13 @@
 <html lang="en">
 	<head></head>
 	<body>
-		<h1>Incendios en España desde 2001 hasta 2011</h1>
+		<h1>Prueba BD CSV y mapa googlemaps</h1>
 		<table border=1 cellpadding=7>
 			<tr>
 				<th>Name</th>
 			</tr>
+		{{googlemap("simple-map", 80.3, 32.38)}}
+
 		{% for obj in object_list %}
 			<tr>
 				<td>{{ obj['Text'].decode('UTF-8') }}</td>

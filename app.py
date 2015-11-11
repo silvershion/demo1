@@ -1,7 +1,10 @@
 import csv
 from flask import Flask
 from flask import render_template
+from flask.ext.googlemaps import GoogleMaps
+
 app = Flask(__name__)
+GoogleMaps(app)
 
 csv_path = './static/incendios.csv'
 csv_obj = csv.DictReader(open(csv_path, 'r'))
